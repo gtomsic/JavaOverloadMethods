@@ -9,7 +9,14 @@ public class OverloadingMethodsChallenge {
     }
 
     public  static  double convertToCentimeters(int feet, int inches) {
-        return  ((feet * 12) + inches) * 2.54;
+        // Short way code
+        // return  convertToCentimeters(((feet * 12) + inches));
+
+        // Detailed, For readability
+        int feetToInches = feet * 12;
+        int totalInches = feetToInches + inches;
+        double result = convertToCentimeters(totalInches);
+        return result;
     }
 
 }
